@@ -1,0 +1,42 @@
+name: manov
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  intl: ^0.17.0
+  bottom_bar: ^2.0.3
+  calendar_date_picker2: 0.5.2
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: 2.0.2
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  assets: 
+    - assets/logo/
+    - assets/icon/
+    - assets/bottombaricon/
+    - assets/images/
+  fonts: 
+    - family: Barlow
+      fonts: 
+        - asset: assets/font/Barlow-Regular.ttf
+    - family: Barlow-Medium
+      fonts: 
+        - asset: assets/font/Barlow-Medium.ttf
+    - family: Barlow-Bold
+      fonts: 
+        - asset: assets/font/Barlow-Bold.ttf
+    - family: Barlow-SemiBold
+      fonts: 
+        - asset: assets/font/Barlow-SemiBold.ttf
+  uses-material-design: true
+
