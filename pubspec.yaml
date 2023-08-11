@@ -11,6 +11,7 @@ dependencies:
   intl: ^0.17.0
   bottom_bar: ^2.0.3
   calendar_date_picker2: 0.5.2
+  fl_chart: ^0.63.0
   flutter: 
     sdk: flutter
 
