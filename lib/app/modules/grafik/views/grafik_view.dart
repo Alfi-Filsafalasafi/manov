@@ -214,38 +214,38 @@ class GrafikView extends GetView<GrafikController> {
                             color: Color(0xFF0D1B2A)),
                       ),
                     ),
-                    ProgressIndicator(
+                    const ProgressIndicator(
                       kategori: "Makanan",
                       persen: 77,
                       uang: "Rp. 600.000",
                       warna: Color(0xFF1982C4),
                     ),
-                    ProgressIndicator(
+                    const ProgressIndicator(
                       kategori: "Transportasi",
                       persen: 10,
                       uang: "Rp. 75.000",
                       warna: Color(0xFFFB5607),
                     ),
-                    ProgressIndicator(
+                    const ProgressIndicator(
                       kategori: "Papan",
                       persen: 6,
                       uang: "Rp. 40.000",
                       warna: Color(0xFF8338EC),
                     ),
-                    ProgressIndicator(
+                    const ProgressIndicator(
                       kategori: "Minuman",
                       persen: 3,
                       uang: "Rp. 30.000",
                       warna: Color(0xFFFFBE0B),
                     ),
-                    ProgressIndicator(
-                      kategori: "Minuman",
+                    const ProgressIndicator(
+                      kategori: "Lainnya",
                       persen: 3,
                       uang: "Rp. 25.000",
                       warna: Color(0xFFFF006E),
                     ),
-                    ProgressIndicator(
-                      kategori: "Minuman",
+                    const ProgressIndicator(
+                      kategori: "Hiburan",
                       persen: 1,
                       uang: "Rp. 10.000",
                       warna: Color(0xFF00FF0A),

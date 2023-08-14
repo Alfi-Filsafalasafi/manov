@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 import 'package:intl/intl.dart'; // Import ini untuk inisi
+import 'package:manov/app/routes/app_pages.dart';
 
 import '../../../controllers/page_index_controller_controller.dart';
 import '../controllers/home_controller.dart';
@@ -306,7 +307,10 @@ class HomeView extends GetView<HomeController> {
                               )
                             ],
                           ),
-                          Container(
+                          GestureDetector(
+                            onTap: () {
+                              Get.toNamed(Routes.HISTORY);
+                            },
                             child: Column(
                               children: [
                                 Container(

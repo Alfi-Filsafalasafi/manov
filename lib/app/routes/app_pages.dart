@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/grafik/bindings/grafik_binding.dart';
 import '../modules/grafik/views/grafik_view.dart';
+import '../modules/history/bindings/history_binding.dart';
+import '../modules/history/views/history_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/listHariIni/bindings/list_hari_ini_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.GRAFIK,
       page: () => GrafikView(),
       binding: GrafikBinding(),
+    ),
+    GetPage(
+      name: _Paths.HISTORY,
+      page: () => HistoryView(),
+      binding: HistoryBinding(),
     ),
   ];
 }

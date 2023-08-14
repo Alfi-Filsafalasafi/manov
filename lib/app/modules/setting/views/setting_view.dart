@@ -20,9 +20,10 @@ class SettingView extends GetView<SettingController> {
             padding: EdgeInsets.only(left: 10, right: 30, top: 50, bottom: 10),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-              Text(
+              const Text(
                 "Saldo Rp.1835.000",
                 textAlign: TextAlign.right,
+                style: TextStyle(fontFamily: 'Barlow-Medium'),
               ),
               ListTile(
                 leading: CircleAvatar(

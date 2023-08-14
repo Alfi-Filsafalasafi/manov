@@ -7,6 +7,7 @@ abstract class Routes {
   static const SETTING = _Paths.SETTING;
   static const LIST_HARI_INI = _Paths.LIST_HARI_INI;
   static const GRAFIK = _Paths.GRAFIK;
+  static const HISTORY = _Paths.HISTORY;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const SETTING = '/setting';
   static const LIST_HARI_INI = '/list-hari-ini';
   static const GRAFIK = '/grafik';
+  static const HISTORY = '/history';
 }
