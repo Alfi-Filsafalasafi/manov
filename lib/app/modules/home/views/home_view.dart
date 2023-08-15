@@ -208,104 +208,113 @@ class HomeView extends GetView<HomeController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Column(
-                            children: [
-                              Container(
-                                width: 48,
-                                height: 48,
-                                decoration: BoxDecoration(
-                                  color: Color(0xFFF1FBFF),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.all(
-                                      9), // Padding di sekitar ikon
-                                  child: Center(
-                                    child: Image.asset(
-                                      "assets/icon/pemasukan.png", // Path ke ikon
-                                      width: 18,
-                                      height: 24,
+                          GestureDetector(
+                            onTap: () => Get.toNamed(Routes.PEMASUKAN),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 48,
+                                  height: 48,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFF1FBFF),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(
+                                        9), // Padding di sekitar ikon
+                                    child: Center(
+                                      child: Image.asset(
+                                        "assets/icon/pemasukan.png", // Path ke ikon
+                                        width: 18,
+                                        height: 24,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                "Pemasukan",
-                                style: TextStyle(
-                                    fontFamily: 'Barlow-Medium',
-                                    fontSize: 12,
-                                    color: Colors.black),
-                              )
-                            ],
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Pemasukan",
+                                  style: TextStyle(
+                                      fontFamily: 'Barlow-Medium',
+                                      fontSize: 12,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
                           ),
-                          Column(
-                            children: [
-                              Container(
-                                width: 48,
-                                height: 48,
-                                decoration: BoxDecoration(
-                                  color: Color(0xFFF1FBFF),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.all(
-                                      9), // Padding di sekitar ikon
-                                  child: Center(
-                                    child: Image.asset(
-                                      "assets/icon/pengeluaran.png", // Path ke ikon
-                                      width: 18,
-                                      height: 24,
+                          GestureDetector(
+                            onTap: () => Get.toNamed(Routes.PENGELUARAN),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 48,
+                                  height: 48,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFF1FBFF),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(
+                                        9), // Padding di sekitar ikon
+                                    child: Center(
+                                      child: Image.asset(
+                                        "assets/icon/pengeluaran.png", // Path ke ikon
+                                        width: 18,
+                                        height: 24,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                "Pengeluaran",
-                                style: TextStyle(
-                                    fontFamily: 'Barlow-Medium',
-                                    fontSize: 12,
-                                    color: Colors.black),
-                              )
-                            ],
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Pengeluaran",
+                                  style: TextStyle(
+                                      fontFamily: 'Barlow-Medium',
+                                      fontSize: 12,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
                           ),
-                          Column(
-                            children: [
-                              Container(
-                                width: 48,
-                                height: 48,
-                                decoration: BoxDecoration(
-                                  color: Color(0xFFF1FBFF),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.all(
-                                      9), // Padding di sekitar ikon
-                                  child: Center(
-                                    child: Image.asset(
-                                      "assets/icon/rekomendasi.png", // Path ke ikon
-                                      width: 18,
-                                      height: 24,
+                          GestureDetector(
+                            onTap: () => Get.toNamed(Routes.REKOMENDASI),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 48,
+                                  height: 48,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFF1FBFF),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(
+                                        9), // Padding di sekitar ikon
+                                    child: Center(
+                                      child: Image.asset(
+                                        "assets/icon/rekomendasi.png", // Path ke ikon
+                                        width: 18,
+                                        height: 24,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                "Rekomendasi",
-                                style: TextStyle(
-                                    fontFamily: 'Barlow-Medium',
-                                    fontSize: 12,
-                                    color: Colors.black),
-                              )
-                            ],
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Rekomendasi",
+                                  style: TextStyle(
+                                      fontFamily: 'Barlow-Medium',
+                                      fontSize: 12,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {

@@ -351,9 +351,10 @@ class HistoryView extends GetView<HistoryController> {
                             (weekIndex) {
                               DateTime startOfWeek = calculateStartOfWeek(
                                   DateTime.now(), weekIndex);
+                              print(startOfWeek);
                               return DataHistory(
                                 hari: buildWeeklyDateRange(startOfWeek),
-                                tgl: buildWeekly(startOfWeek),
+                                tgl: "Minggu ${weekIndex + 1}",
                                 pemasukan:
                                     "Rp. ${generatePemasukanValue(weekIndex)}",
                                 pengeluaran:
@@ -437,11 +438,62 @@ class HistoryView extends GetView<HistoryController> {
                 ),
 
                 //ini page 4
-                Center(
-                  child: Text(
-                    "Ini page 4",
-                    style: TextStyle(color: Color(0xFF023047)),
-                  ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            children: [
+                              Text("Pemasukan",
+                                  style: TextStyle(color: Color(0xFF52656F))),
+                              Text("Rp. 8.100.000",
+                                  style: TextStyle(
+                                      color: Color(0xFF2A9D8F),
+                                      fontFamily: 'Barlow-Medium')),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text("Pengeluaran",
+                                  style: TextStyle(color: Color(0xFF52656F))),
+                              Text("Rp. 5.855.000",
+                                  style: TextStyle(
+                                      color: Color(0xFFE76F51),
+                                      fontFamily: 'Barlow-Medium')),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: Get.width,
+                      height: 10,
+                      color: Color(0xFFF9F9F9),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: ListView(
+                          children: List.generate(
+                            2,
+                            (index) {
+                              int reversedIndex = 1 - index;
+                              return DataHistoryTahun(
+                                tahun: "${2022 + reversedIndex}",
+                                pemasukan:
+                                    "Rp. ${generatePemasukanValueTahunan(index)}",
+                                pengeluaran:
+                                    "Rp. ${generatePengeluaranValueTahunan(index)}",
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),
@@ -583,6 +635,36 @@ String generatePengeluaranValueBulanan(int weekIndex) {
   return pengeluaran;
 }
 
+String generatePemasukanValueTahunan(int weekIndex) {
+  var pemasukan = "0";
+  switch (weekIndex) {
+    case 0:
+      pemasukan = "8.100.000";
+      break;
+    case 1:
+      pemasukan = "0";
+      break;
+    default:
+      pemasukan = "0";
+  }
+  return pemasukan;
+}
+
+String generatePengeluaranValueTahunan(int weekIndex) {
+  var pengeluaran = "0";
+  switch (weekIndex) {
+    case 0:
+      pengeluaran = "5.600.000";
+      break;
+    case 1:
+      pengeluaran = "255.000";
+      break;
+    default:
+      pengeluaran = "0";
+  }
+  return pengeluaran;
+}
+
 class DataHistory extends StatelessWidget {
   const DataHistory({
     super.key,
@@ -613,6 +695,60 @@ class DataHistory extends StatelessWidget {
                   Text(tgl, style: TextStyle(color: Color(0xFF52656F))),
                 ],
               ),
+            ),
+            Container(
+              width: Get.width / 4,
+              child: Text(pemasukan,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                      fontFamily: 'Barlow-Medium',
+                      fontSize: 12,
+                      color: Color(0xFF2A9D8F))),
+            ),
+            Container(
+              width: Get.width / 4,
+              child: Text(pengeluaran,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                      fontFamily: 'Barlow-Medium',
+                      fontSize: 12,
+                      color: Color(0xFFE76F51))),
+            )
+          ],
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Divider(),
+        SizedBox(
+          height: 5,
+        ),
+      ],
+    );
+  }
+}
+
+class DataHistoryTahun extends StatelessWidget {
+  const DataHistoryTahun({
+    super.key,
+    required this.tahun,
+    required this.pemasukan,
+    required this.pengeluaran,
+  });
+  final String tahun;
+  final String pemasukan;
+  final String pengeluaran;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              width: Get.width / 4,
+              child: Text(tahun, style: TextStyle(color: Color(0xFF52656F))),
             ),
             Container(
               width: Get.width / 4,

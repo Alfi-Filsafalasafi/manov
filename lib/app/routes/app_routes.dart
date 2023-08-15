@@ -8,6 +8,10 @@ abstract class Routes {
   static const LIST_HARI_INI = _Paths.LIST_HARI_INI;
   static const GRAFIK = _Paths.GRAFIK;
   static const HISTORY = _Paths.HISTORY;
+  static const REKOMENDASI = _Paths.REKOMENDASI;
+  static const TRANSAKSI = _Paths.TRANSAKSI;
+  static const PEMASUKAN = _Paths.PEMASUKAN;
+  static const PENGELUARAN = _Paths.PENGELUARAN;
 }
 
 abstract class _Paths {
@@ -17,4 +21,8 @@ abstract class _Paths {
   static const LIST_HARI_INI = '/list-hari-ini';
   static const GRAFIK = '/grafik';
   static const HISTORY = '/history';
+  static const REKOMENDASI = '/rekomendasi';
+  static const TRANSAKSI = '/transaksi';
+  static const PEMASUKAN = '/pemasukan';
+  static const PENGELUARAN = '/pengeluaran';
 }
