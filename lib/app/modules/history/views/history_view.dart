@@ -5,8 +5,10 @@ import 'package:intl/intl.dart';
 
 import '../controllers/history_controller.dart';
 
+// ignore: must_be_immutable
 class HistoryView extends GetView<HistoryController> {
   int totalMonths = DateTime.now().month;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

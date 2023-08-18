@@ -1,23 +1,12 @@
 import 'package:get/get.dart';
 
 class TransaksiController extends GetxController {
-  //TODO: Implement TransaksiController
+  final List<String> dropdownItems = [
+    'Pilih Salah Satu',
+    'Item 1',
+    'Item 2',
+    'Item 3',
+  ];
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  final RxString selectedValue = 'Pilih Salah Satu'.obs;
 }
