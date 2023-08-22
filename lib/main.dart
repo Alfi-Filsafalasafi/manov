@@ -32,7 +32,8 @@ void main() {
             titleSmall:
                 TextStyle(fontFamily: 'Barlow-Medium', color: Colors.white)),
       ),
-      initialRoute: AppPages.INITIAL,
+      // initialRoute: AppPages.INITIAL,
+      initialRoute: Routes.INTRODUCTION,
       getPages: AppPages.routes,
     ),
   );

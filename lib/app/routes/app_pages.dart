@@ -6,6 +6,8 @@ import '../modules/history/bindings/history_binding.dart';
 import '../modules/history/views/history_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/introduction/bindings/introduction_binding.dart';
+import '../modules/introduction/views/introduction_view.dart';
 import '../modules/listHariIni/bindings/list_hari_ini_binding.dart';
 import '../modules/listHariIni/views/list_hari_ini_view.dart';
 import '../modules/pemasukan/bindings/pemasukan_binding.dart';
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.PENGELUARAN,
       page: () => const PengeluaranView(),
       binding: PengeluaranBinding(),
+    ),
+    GetPage(
+      name: _Paths.INTRODUCTION,
+      page: () => const IntroductionView(),
+      binding: IntroductionBinding(),
     ),
   ];
 }

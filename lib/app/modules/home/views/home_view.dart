@@ -51,8 +51,11 @@ class HomeView extends GetView<HomeController> {
                               Row(
                                 children: [
                                   Container(
+                                    width: 27,
+                                    height: 16,
                                     margin: EdgeInsets.only(right: 10),
-                                    child: Image.asset("assets/logo/logo.png"),
+                                    child:
+                                        Image.asset("assets/logo/logoapk.png"),
                                   ),
                                   DisplayDateNow(),
                                 ],
@@ -191,7 +194,7 @@ class HomeView extends GetView<HomeController> {
                         Container(
                           height: 28,
                           width: 28,
-                          child: Image.asset("assets/icon/unduh.png"),
+                          child: Image.asset("assets/icon/unduhan.png"),
                         )
                       ],
                     ),
